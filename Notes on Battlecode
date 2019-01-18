@@ -1,0 +1,5 @@
+Notes on Battlecode
+
+- Pilgrims: Mine fuel and karbonite build robots, scout
+- 
+- The impassable/passable tiles and resource tiles are visible to all robots at beginning of game, but can only see robots within their vision radius
