@@ -35,17 +35,24 @@ public class MyRobot extends BCAbstractRobot
 
     public Action castle()
 	{
-		if (me.turn < 100)
+		if (me.turn < 10)
 		{
 			log("Building a pilgrim.");
-	 		return buildUnit(SPECS.PILGRIM, 1, 0);
+			int x, y;
+
+
+			// If on the edge
+			
+
+
+	 		return buildUnit(SPECS.PILGRIM, x, y);
 		}
 		return null;
 	}
 
 	public Action church()
 	{
-		if (me.turn < 100)
+		if (me.turn < 10)
 		{
 			log("Building a pilgrim.");
 	 		return buildUnit(SPECS.PILGRIM, 1, 0);
