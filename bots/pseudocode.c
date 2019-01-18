@@ -28,31 +28,41 @@ void castle()
 
 void church()
 {
-	if (rightByCastle)
-		moveAway();	
+	if (turn < someSmallNumber)
+	{
+		makePreachers();
+		makeProphets();
+	}
+
 }
 
 void pilgrim()
 {
-	if (rightByCastle)
-		moveAway();
 
+	if (rightByCastleorChurch) // If adjacent
+		moveAway();	// In order to make more room for more troops
 }
 
 void crusader()
 {
-	if (rightByCastle)
+	if (enemyNearEnoughtoAttack)
+		attack();
+	if (rightByCastleorChurch)
 		moveAway();
 }
 
 void prophet()
 {
-	if (rightByCastle)
+	if (enemyNearEnoughtoAttack)
+		attack();
+	if (rightByCastleorChurch)
 		moveAway();
 }
 
 void preacher()
 {
-	if (rightByCastle)
+	if (enemyNearEnoughtoAttack)
+		attack();
+	if (rightByCastleorChurch)
 		moveAway();
 }
