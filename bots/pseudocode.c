@@ -18,22 +18,22 @@ void turn()
 
 void castle()
 {
-	if (turn < someSmallNumber)
+	if (turn < someSmallNumber || unprotected())
 	{
 		makePreachers();
 		makeProphets();
 	}
-
+	doNothing();
 }
 
 void church()
 {
-	if (turn < someSmallNumber)
+	if (turn < someSmallNumber || unprotected())
 	{
 		makePreachers();
 		makeProphets();
 	}
-
+	doNothing();
 }
 
 void pilgrim()
@@ -44,11 +44,18 @@ void pilgrim()
 		signalEnemyLoc();
 		moveTowardsCastleorChurch();
 	}
-	if ()
 	if (rightByCastleorChurch) // If adjacent
 		moveAway();	// In order to make more room for more troops
-
-
+	if (locatedOnKarboniteDeposit && karbonite<fuel)
+mineKarbonite();
+if (locatedOnFuelDeposit && fuel<karbonite)
+mineFuel();
+if (karbonite<fuel)
+seekKarbonite();
+if (fuel>karbonite())
+seekFuel();
+}
+doNothing();
 }
 
 void crusader()
@@ -57,6 +64,8 @@ void crusader()
 		attack();
 	if (rightByCastleorChurch)
 		moveAway();
+if (receivedEnemyLoc)
+moveTowardsEnemy();
 }
 
 void prophet()
@@ -65,6 +74,9 @@ void prophet()
 		attack();
 	if (rightByCastleorChurch)
 		moveAway();
+if (receivedEnemyLoc)
+moveTowardsEnemy();
+doNothing();
 }
 
 void preacher()
@@ -73,4 +85,8 @@ void preacher()
 		attack();
 	if (rightByCastleorChurch)
 		moveAway();
+if (receivedEnemyLoc)
+moveTowardsEnemy(); // Implement so that the enemy troops wait until there are enough troops to attack
+	doNothing();
 }
+
