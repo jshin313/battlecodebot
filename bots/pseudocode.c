@@ -20,32 +20,39 @@ void castle()
 {
 	if (turn < someSmallNumber)
 	{
-		makePilgrims();
+		makePreachers();
+		makeProphets();
 	}
-	
+
 }
 
 void church()
 {
-
+	if (rightByCastle)
+		moveAway();	
 }
 
 void pilgrim()
 {
+	if (rightByCastle)
+		moveAway();
 
 }
 
 void crusader()
 {
-
+	if (rightByCastle)
+		moveAway();
 }
 
 void prophet()
 {
-
+	if (rightByCastle)
+		moveAway();
 }
 
 void preacher()
 {
-
+	if (rightByCastle)
+		moveAway();
 }
