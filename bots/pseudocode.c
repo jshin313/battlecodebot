@@ -39,8 +39,15 @@ void church()
 void pilgrim()
 {
 
+	if (EnemyVisible)
+	{
+		signalEnemyLoc();
+		moveTowardsCastleorChurch();
+	}
 	if (rightByCastleorChurch) // If adjacent
 		moveAway();	// In order to make more room for more troops
+
+
 }
 
 void crusader()
