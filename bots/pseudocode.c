@@ -44,6 +44,7 @@ void pilgrim()
 		signalEnemyLoc();
 		moveTowardsCastleorChurch();
 	}
+	if ()
 	if (rightByCastleorChurch) // If adjacent
 		moveAway();	// In order to make more room for more troops
 
