@@ -47,15 +47,14 @@ void pilgrim()
 	if (rightByCastleorChurch) // If adjacent
 		moveAway();	// In order to make more room for more troops
 	if (locatedOnKarboniteDeposit && karbonite<fuel)
-mineKarbonite();
-if (locatedOnFuelDeposit && fuel<karbonite)
-mineFuel();
-if (karbonite<fuel)
-seekKarbonite();
-if (fuel>karbonite())
-seekFuel();
-}
-doNothing();
+		mineKarbonite();
+	if (locatedOnFuelDeposit && fuel<karbonite)
+		mineFuel();
+	if (karbonite<fuel)
+		seekKarbonite();
+	if (fuel>karbonite())
+		seekFuel();
+	doNothing();
 }
 
 void crusader()
@@ -64,8 +63,8 @@ void crusader()
 		attack();
 	if (rightByCastleorChurch)
 		moveAway();
-if (receivedEnemyLoc)
-moveTowardsEnemy();
+	if (receivedEnemyLoc)
+		moveTowardsEnemy();
 }
 
 void prophet()
@@ -74,9 +73,9 @@ void prophet()
 		attack();
 	if (rightByCastleorChurch)
 		moveAway();
-if (receivedEnemyLoc)
-moveTowardsEnemy();
-doNothing();
+	if (receivedEnemyLoc)
+		moveTowardsEnemy();
+	doNothing();
 }
 
 void preacher()
@@ -85,8 +84,8 @@ void preacher()
 		attack();
 	if (rightByCastleorChurch)
 		moveAway();
-if (receivedEnemyLoc)
-moveTowardsEnemy(); // Implement so that the enemy troops wait until there are enough troops to attack
+	if (receivedEnemyLoc)
+		moveTowardsEnemy(); // Implement so that the enemy troops wait until there are enough troops to attack
 	doNothing();
 }
 
